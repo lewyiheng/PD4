@@ -30,7 +30,7 @@ public class signUp extends AppCompatActivity {
         btnUp = findViewById(R.id.btnSignUp);
 
         final FirebaseDatabase db = FirebaseDatabase.getInstance();
-        final DatabaseReference userDB = db.getReference("User");
+        final DatabaseReference userDB = db.getReference("Users");
 
         btnUp.setOnClickListener(new View.OnClickListener() {
             @Override

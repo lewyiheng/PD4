@@ -1,5 +1,8 @@
 package com.example.pd4;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.Serializable;
 
 public class gameObjects implements Serializable {
@@ -51,4 +54,8 @@ public class gameObjects implements Serializable {
     public void setPrice(String price) {
         this.price = price;
     }
+
+
 }
+
+

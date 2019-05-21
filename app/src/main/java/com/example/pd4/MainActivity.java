@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Button up = findViewById(R.id.signUp);
 
         final FirebaseDatabase db = FirebaseDatabase.getInstance();
-        final DatabaseReference userDB = db.getReference("User");
+        final DatabaseReference userDB = db.getReference("Users");
 
         in.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,15 +44,15 @@ public class MainActivity extends AppCompatActivity {
                             User user = dataSnapshot.child(user1.getText().toString()).getValue(User.class);
 
                             if (user.getPassword().equals(pw1.getText().toString())) {
-                                Toast.makeText(MainActivity.this, "Yes", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
                                 Intent i = new Intent(MainActivity.this, menu.class);
                                 startActivity(i);
 
                             } else {
-                                Toast.makeText(MainActivity.this, "NO!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Wrong user/password!", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(MainActivity.this,"You ahvent signed up", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this,"You haven't signed up", Toast.LENGTH_SHORT).show();
                         }
 
                     }
