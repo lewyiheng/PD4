@@ -20,7 +20,7 @@ public class menu3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu3);
-        lv = findViewById(R.id.lvGamesList1);
+        lv = findViewById(R.id.lvGames3);
 
         al = new ArrayList<gameObjects>();
         al.add(new gameObjects("Overwatch","59.90"));

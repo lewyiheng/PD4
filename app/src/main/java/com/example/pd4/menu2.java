@@ -21,7 +21,7 @@ public class menu2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu2);
 
-        lv = findViewById(R.id.lvGamesList1);
+        lv = findViewById(R.id.lvGames2);
 
         al = new ArrayList<gameObjects>();
         al.add(new gameObjects("StarCraft II", "39.99"));

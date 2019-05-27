@@ -51,12 +51,12 @@ public class menu extends AppCompatActivity {
                     startActivityForResult(i, 0);
                 }
 
-                if (position == 1) {
+                else if (position == 1) {
                     Intent i = new Intent(menu.this, menu2.class);
                     startActivityForResult(i, 0);
                 }
 
-                if (position == 2) {
+                else if (position == 2) {
                     Intent i = new Intent(menu.this, menu3.class);
                     startActivityForResult(i, 0);
                 }else{
