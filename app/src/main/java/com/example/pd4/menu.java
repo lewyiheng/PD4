@@ -59,6 +59,9 @@ public class menu extends AppCompatActivity {
                 if (position == 2) {
                     Intent i = new Intent(menu.this, menu3.class);
                     startActivityForResult(i, 0);
+                }else{
+                    Intent i = new Intent(menu.this, maintainance.class);
+                    startActivityForResult(i, 0);
                 }
 
             }

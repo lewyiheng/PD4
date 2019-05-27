@@ -7,6 +7,24 @@
     android:orientation="vertical"
     tools:context=".menu">
 
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="First-person-shooters"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </android.support.v7.widget.Toolbar>
+
     <ListView
         android:id="@+id/lvGames3"
         android:layout_width="match_parent"

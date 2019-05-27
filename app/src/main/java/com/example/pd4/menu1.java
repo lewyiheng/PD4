@@ -61,7 +61,7 @@ public class menu1 extends AppCompatActivity {
 
         al = new ArrayList<gameObjects>();
         al.add(new gameObjects("Overwatch","59.90"));
-        al.add(new gameObjects("PAYDAY 2","29.99"));
+        al.add(new gameObjects("PAYDAY 2","19.99"));
 
         aa = new gameAdapter(menu1.this,R.layout.game_row,al);
         lv.setAdapter(aa);
@@ -73,6 +73,10 @@ lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         if (i == 0) {
             Intent intent = new Intent(menu1.this,webview.class);
             intent.putExtra("link","file:///android_asset/overwatch.html");
+            startActivity(intent);
+        }else if (i == 1){
+            Intent intent = new Intent(menu1.this,webview.class);
+            intent.putExtra("link","file:///android_asset/payday2.html");
             startActivity(intent);
         }
 
