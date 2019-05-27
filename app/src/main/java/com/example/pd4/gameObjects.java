@@ -8,18 +8,14 @@ import java.io.Serializable;
 public class gameObjects implements Serializable {
 
     String name;
-    String image;
-    String discount;
     String price;
 
     public gameObjects(){
 
     }
 
-    public gameObjects(String name, String image, String discount, String price) {
+    public gameObjects(String name,String price) {
         this.name = name;
-        this.image = image;
-        this.discount = discount;
         this.price = price;
     }
 
@@ -29,22 +25,6 @@ public class gameObjects implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public String getDiscount() {
-        return discount;
-    }
-
-    public void setDiscount(String discount) {
-        this.discount = discount;
     }
 
     public String getPrice() {

@@ -28,13 +28,14 @@ public class gameAdapter extends ArrayAdapter<gameObjects> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View rowView = inflater.inflate(R.layout.menu_row,parent,false);
+        View rowView = inflater.inflate(R.layout.game_row,parent,false);
 
         gameObjects results = gameObj.get(position);
 
-        name = rowView.findViewById(R.id.tvGame);
-
+        name = rowView.findViewById(R.id.tvGame1);
+        price = rowView.findViewById(R.id.tvPrice1);
         name.setText(results.getName());
+        price.setText(results.getPrice());
 
         return rowView;
     }
