@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:background="@color/grey"
+    android:background="@drawable/large"
     >
 
 
@@ -60,7 +60,8 @@
         android:backgroundTint="@color/lighterGrey"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        />
 
     <Button
         android:id="@+id/signUp"
