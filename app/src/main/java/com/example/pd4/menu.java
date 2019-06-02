@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -20,12 +21,16 @@ public class menu extends AppCompatActivity {
     ArrayAdapter aa;
     LinearLayout ll;
 
+    Button chatbox, email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
         lv = findViewById(R.id.lvMenu);
+        chatbox = findViewById(R.id.chatbot);
+        email = findViewById(R.id.email);
 
         al = new ArrayList<menuObjects>();
         al.add(new menuObjects("Action Games", ""));
@@ -66,5 +71,26 @@ public class menu extends AppCompatActivity {
 
             }
         });
+
+        email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+
+                Intent email = new Intent(Intent.ACTION_SEND);
+                email.putExtra(Intent.EXTRA_EMAIL, new String[]{"lewyiheng@gmail.com"});
+                email.setType("message/rfc822");
+                startActivity(Intent.createChooser(email,"Choose an Email client"));
+
+            }
+        });
+
+        chatbox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(menu.this,chatbot.class);
+                startActivity(i);
+            }
+        });
+
     }
 }

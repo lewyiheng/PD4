@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".maintainance"></activity>
+        <activity android:name=".chatbot"></activity>
+        <activity android:name=".maintainance" />
         <activity android:name=".webview" />
         <activity android:name=".menu3" />
         <activity android:name=".menu2" />
